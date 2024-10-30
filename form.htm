@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Bitlet plugin</title>
+	<script type="text/javascript" src="../../../wp-includes/js/tinymce/tiny_mce_popup.js?ver=3211"></script>
+	<script type="text/javascript" src="../../../wp-includes/js/tinymce/utils/mctabs.js?ver=3211"></script>
+	<script type="text/javascript" src="../../../wp-includes/js/tinymce/utils/form_utils.js?ver=3211"></script>
+	<script type="text/javascript" src="../../../wp-includes/js/tinymce/utils/validate.js?ver=3211"></script>
+	<script type="text/javascript" src="js/bitlet.js?ver=3211"></script>
+	<base target="_self" />
+</head>
+<body id="link" style="display: none">
+<form onsubmit="BitletDialog.update();return false;" action="#">
+	<div class="tabs">
+		<ul>
+			<li id="general_tab" class="current"><span><a href="javascript:mcTabs.displayTab('general_tab','general_panel');" onmousedown="return false;">{#advanced_dlg.link_title}</a></span></li>
+		</ul>
+	</div>
+
+	<div class="panel_wrapper">
+		<div id="general_panel" class="panel current">
+
+		<table border="0" cellpadding="4" cellspacing="0">
+          <tr>
+            <td nowrap="nowrap"><label for="href">{#advanced_dlg.link_url}</label></td>
+            <td><table border="0" cellspacing="0" cellpadding="0"> 
+				  <tr> 
+					<td><input id="href" name="href" type="text" class="mceFocus" 
+					value="http://" 
+					style="width: 200px" onfocus="try{this.select();}catch(e){}" /></td> 
+					<td id="hrefbrowsercontainer">&nbsp;</td>
+				  </tr> 
+				</table></td>
+          </tr>
+        </table>
+		</div>
+	</div>
+	<div class="mceActionPanel">
+		<div style="float: left">
+			<input type="button" id="cancel" name="cancel" value="{#cancel}" onclick="tinyMCEPopup.close();" />
+		</div>
+
+		<div style="float: right">
+			<input type="submit" id="insert" name="insert" value="{#insert}" />
+		</div>
+	</div>
+</form>
+</body>
+</html>
